@@ -1,0 +1,55 @@
+@page{
+  size: letter portrait;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+:root{
+  --pagedjs-margin-right: 0.25in;
+  --pagedjs-margin-left: 0.25in;
+  --pagedjs-margin-top: 0.5in;
+  --pagedjs-margin-bottom: 0.5in;
+  --content-width: calc(var(--page-width) - var(--margin-right) - var(--margin-left));
+  --root-font-size: 11pt;
+  --sidebar-width: 15rem;
+  --sidebar-background-color: #f2f2f2;
+  --main-width: calc(var(--content-width) - var(--sidebar-width));
+  --viewer-background-color: #dcdcdc;
+  --viewer-pages-spacing: 12px;
+  --viewer-shadow-color: #313131;
+}
+/* Hides Page Numbers */
+.pagedjs_page .pagedjs_margin-bottom-center>.pagedjs_margin-content::after {
+    visibility: hidden;
+}
+
+/* 
+Fonts
+*/
+
+h1, h2, h3, h4 {
+  font-family: "Overpass", sans-serif;
+}
+h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  color: #000000;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #070504;
+}
+h3 {
+  font-weight: 650;
+  font-size: 1.25rem;
+  color: #070504;
+}
+h4 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #070504;
+}

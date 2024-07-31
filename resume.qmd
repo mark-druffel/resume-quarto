@@ -1,0 +1,101 @@
+--- 
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');</style>
+      - text: |
+          <script src="resources/js/paged.polyfill.js"></script>
+      - text: |
+          <link rel="stylesheet" type="text/css" href="resources/css/print.css">
+      - text: |
+          <link rel="stylesheet" type="text/css" href="resources/css/preview.css" media="screen">
+    page-layout: custom
+    embed-resources: true
+    pagetitle: "Mark Druffel"
+    author-meta: "Mark Druffel"
+    toc: false 
+    anchor-sections: false
+    smooth-scroll: true
+    link-external-icon: true
+    link-external-newwindow: true
+    email-obfuscation: references
+    css: [css/resume.css, css/header.css]
+engine: knitr
+execute:  
+  echo: false
+  error: false
+  eval: true
+  output: true
+  warning: false 
+---
+:::{.header-bar}
+ 
+# Mark Druffel {.header-name}
+### Data Scientist, Engineer {.header-title} 
+```{r}
+#| file: R/header.R
+``` 
+My blurb should explain who I am and what I want... 
+ 
+:::
+
+:::: {.columns}
+
+::: {.column width="71%"}
+## Experience
+
+### 84.51°
+#### Lead Data Scientist
+
+### Docstation
+#### Senior Data Analyst
+
+### Propeller
+#### Analytics Consultant
+
+### Northern Trust
+#### Analytics Product Manager
+#### Business Intelligence Manager
+
+### Plante Moran
+#### Senior Consultant
+#### Staff Consultant
+
+
+### Fifth Third Bank
+#### Staff Auditor
+
+:::
+
+::: {.column width="3%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="26%"}
+## Education
+
+#### Ohio Unviersity
+
+#### University of Notre Dame
+
+## Skills
+
+## Languages
+
+## Tools
+
+#### Data Engineering
+
+#### Analytics / Data Science
+
+#### Devops
+
+#### Design
+
+## Volunteer
+##### Civic Software Fdn
+
+:::
+
+:::
