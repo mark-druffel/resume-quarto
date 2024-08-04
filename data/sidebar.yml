@@ -1,0 +1,80 @@
+sidebar:
+  Education:
+    "University of Notre Dame":
+      date: 2016
+      degree: "M.S in Business Analytics"
+    "Ohio University": 
+      date: 2010
+      degree: "Bachelors in Business Admin"
+  Skills:
+    General:
+      scoring_scale: 7
+      "Analysis": 7
+      "Modeling": 3
+      "Programming": 4
+      "System Design": 6
+      "UX": 5
+      "Story Telling": 7
+      "Project Managment": 6
+    Coding:
+      scoring_scale: 10
+      R: 9
+      Python: 7
+      Julia: 4
+      JavaScript: 5
+      SQL: 9
+      Cypher: 4
+      Bash: 7
+      HTML: 8
+      CSS: 5
+  "Tools":
+    "Data Engineering":
+      Dataframes:
+       - dplyr / dbplyr
+       - Ibis
+       - Polars
+       - pandas
+      SQL:
+       - Postgres 
+       - DuckDB
+       - MS SQL
+      NoSQL:
+       - neo4j
+      "Big Data":
+       - Apache Spark (pyspark & sparklyr) 
+       - Apache Arrow
+      Pipeline:
+       - Kedro
+       - Apache Airflow
+       - targets
+    "Data Science":
+      "Data Visualization / Dashboarding":
+       - ggplot2
+       - plotnine
+       - R shiny
+       - Plotly
+       - observable.js
+       - d3.js
+       - Apache Superset
+       - Tableau
+       - Power BI
+      "Modeling":
+      - tidymodels
+      - scikit-learn
+      - keras
+      - tidytext
+      - fable
+    "Engineering":
+      "Web Dev":
+       - Hugo
+       - Netlify
+       - Quarto
+      "Devops":
+       - git
+       - conda
+       - renv
+       - npm
+       - AWS
+       - Azure
+       - Digital Ocean
+       - docker

@@ -1,34 +1,25 @@
-.header-bar{
+.header{
   display: flex;
   flex-direction: column;
   /*background-color: blue; might want to do some styling with header and page*/
 }
 .header-name {
-  margin-top: 0rem;
-  margin-bottom: 0rem;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0px;
   text-align: center;
+  font-size: 54px;
 }
 .header-title {
-  margin-top: 0rem;
-  margin-bottom: 0rem;
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0px;
   text-align: center;
 }
 .header-icons{
-  font-size: 1.25rem;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-}
-
-.fa-icon, .fa-icon-left {
-  color: black;
-  padding-left: .5em;
-  padding-right: .5em;
-}
-.fa-icon-left{
-  padding-left: 0em;
 }

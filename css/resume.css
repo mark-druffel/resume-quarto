@@ -1,55 +1,187 @@
+/*
+paged.js Layouts
+*/
 @page{
   size: letter portrait;
 }
-
 *{
   box-sizing: border-box;
 }
-
 :root{
-  --pagedjs-margin-right: 0.25in;
-  --pagedjs-margin-left: 0.25in;
-  --pagedjs-margin-top: 0.5in;
-  --pagedjs-margin-bottom: 0.5in;
+  --pagedjs-margin-right: 0in;
+  --pagedjs-margin-left: 0in;
+  --pagedjs-margin-top: 0in;
+  --pagedjs-margin-bottom: 0in;
   --content-width: calc(var(--page-width) - var(--margin-right) - var(--margin-left));
   --root-font-size: 11pt;
-  --sidebar-width: 15rem;
-  --sidebar-background-color: #f2f2f2;
-  --main-width: calc(var(--content-width) - var(--sidebar-width));
   --viewer-background-color: #dcdcdc;
   --viewer-pages-spacing: 12px;
   --viewer-shadow-color: #313131;
+  --resume-margin-top: 0.4in;
+  --resume-margin-right: 0.4in;
+  --resume-margin-bottom: 0.4in;
+  --resume-margin-left: 0.4in;
 }
-/* Hides Page Numbers */
+/* 
+Hides Page Numbers
+*/
 .pagedjs_page .pagedjs_margin-bottom-center>.pagedjs_margin-content::after {
     visibility: hidden;
 }
-
 /* 
-Fonts
+Standard Fonts
 */
-
 h1, h2, h3, h4 {
   font-family: "Overpass", sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 h1 {
   font-weight: 900;
-  font-size: 3rem;
-  color: #000000;
+  font-size: 42px;
 }
 
 h2 {
-  font-weight: 700;
-  font-size: 1.75rem;
-  color: #070504;
+  font-weight: 750;
+  font-size: 16px;
+  padding-bottom: 3px;
 }
 h3 {
-  font-weight: 650;
-  font-size: 1.25rem;
-  color: #070504;
+  font-weight: 700;
+  font-size: 13px;
 }
 h4 {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #070504;
+  font-weight: 650;
+  font-size: 11px;
+}
+p {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 10px;
+  margin-bottom: 0;
+}
+li {
+  font-family: "Lato";
+  font-weight: 375;
+  font-size: 10px;
+  margin-bottom: 0;
+  text-indent: -1.5em;
+  margin-left: 1.75em;
+}
+.h1-left {
+  color: #000000;
+}
+.h2-left {
+  color: #050303;
+  }
+.h3-left {
+  color: #090605;
+}
+.h4-left {
+  color: #0d0907;
+}
+.p-left, .li-left {
+  color: #000000;
+}
+
+.h1-right {
+  color: #FFFFFF;
+}
+.h2-right {
+  color: #FFFFFF;
+  }
+.h3-right {
+  color: #FFFFFF;
+}
+.h4-right {
+  color: #FFFFFF;
+}
+.p-right {
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 10.5px;
+  margin-bottom: 0;
+  color: #FFFFFF;
+}
+
+/*
+Fontawesome Icons
+*/
+.fa-icon, .fa-icon-left {
+  padding-left: .35rem;
+  padding-right: .35rem;
+}
+.fa-icon-left{
+  color: #333333;
+  padding-left: 0px;
+}
+.fa-icon-right{
+  color: ##FFFFFF;
+  padding-right: 0px;
+}
+
+.fa-solid, .fa-icon, .fa-brands {
+  font-size: 1.25rem;
+}
+/*
+knitr / htmltools weirdness
+*/
+.cell-output-display{
+  overflow: inherit;
+}
+
+/*
+Columns
+*/
+.right-column{
+  display: flex;
+  flex-flow: column;
+  height: 9999999999999px;
+  box-sizing: border-box;
+  background-color: #333333
+}
+
+/*
+Sections
+*/
+.section-vbreaker{
+  margin-bottom: 8px;
+}
+.section-top{
+  margin-top: var(--resume-margin-top);
+}
+.section-right{
+  margin-left: 12px;
+  margin-right: var(--resume-margin-right);
+}
+.section-bottom{
+  margin-bottom: var(--resume-margin-bottom);
+}
+.section-left{
+  margin-left: var(--resume-margin-left);
+}
+.section-header{
+  margin-top: 0;
+  margin-bottom: 0px;
+  border-bottom: 2px solid #333333
+}
+
+.section-header-border-padding{
+  margin-top: 6px;
+}
+
+/* 
+specific, could use id with # instead
+*/
+
+.education-entry {
+  margin-bottom: 8px;
+}
+
+.education-entry-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
 }

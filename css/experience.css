@@ -1,0 +1,23 @@
+.experience-company{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: .5mm;
+}
+.experience-role{}
+.experience-role-title{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: .05mm;
+}
+.experience-role-details{
+  margin-bottom: 2.5mm;
+}
+.fa-location-dot{
+  font-size: 13px;
+}

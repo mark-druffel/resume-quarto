@@ -24,6 +24,9 @@
     margin: 0 auto;
   }
 
+/*
+
+*/
   /* even more curious: margins dont overlap here, specify separate margin for first page */
   .pagedjs_page {
     background-color: #fdfdfd;

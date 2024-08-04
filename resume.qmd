@@ -3,7 +3,11 @@ format:
   html:
     include-in-header:
       - text: |
-          <style>@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');</style>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+      - text: |
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      - text: |
+          <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" type='text/css'>
       - text: |
           <script src="resources/js/paged.polyfill.js"></script>
       - text: |
@@ -20,81 +24,56 @@ format:
     link-external-icon: true
     link-external-newwindow: true
     email-obfuscation: references
-    css: [css/resume.css, css/header.css]
+    css: [css/resume.css, css/header.css, css/experience.css]
 engine: knitr
-execute:  
+execute:
+  
   echo: false
   error: false
   eval: true
   output: true
   warning: false 
 ---
-:::{.header-bar}
- 
-# Mark Druffel {.header-name}
-### Data Scientist, Engineer {.header-title} 
 ```{r}
-#| file: R/header.R
-``` 
-My blurb should explain who I am and what I want... 
- 
+#| file: R/resume.R
+```
+
+:::: {.columns} 
+::: {.column width="69%"}
+```{r}
+yaml::read_yaml("data/header.yml") |> 
+  header_div()
+```
+
+```{r} 
+yaml::read_yaml("data/experience.yml") |> 
+  split_jobs() |> 
+  job_divs() |> 
+  section_div(title = "Experience", icon = "suitcase", left = T) 
+```
 :::
 
-:::: {.columns}
-
-::: {.column width="71%"}
-## Experience
-
-### 84.51°
-#### Lead Data Scientist
-
-### Docstation
-#### Senior Data Analyst
-
-### Propeller
-#### Analytics Consultant
-
-### Northern Trust
-#### Analytics Product Manager
-#### Business Intelligence Manager
-
-### Plante Moran
-#### Senior Consultant
-#### Staff Consultant
-
-
-### Fifth Third Bank
-#### Staff Auditor
-
-:::
-
-::: {.column width="3%"}
+::: {.column width="2%"}
 <!-- empty column to create gap -->
 :::
 
-::: {.column width="26%"}
-## Education
+::: {.column .right-column width="29%"} 
+```{r} 
+sidebar_yaml <- yaml::read_yaml("data/sidebar.yml")
+sidebar_yaml |> 
+  split_sidebar() |> 
+  education_divs() |> 
+  section_div(title = "Education", icon = "graduation-cap", top = T, right = T) 
+section_div(title = "Coding", icon = "terminal", right = T)
+```
+```{r}
+#| fig-height: 3.5
+sidebar_yaml |> 
+  split_sidebar() |> 
+  coding_df() |>
+  coding_lollipop(margin_ = margin(0, 2, 0, 0.5, "cm"))
+```
 
-#### Ohio Unviersity
-
-#### University of Notre Dame
-
-## Skills
-
-## Languages
-
-## Tools
-
-#### Data Engineering
-
-#### Analytics / Data Science
-
-#### Devops
-
-#### Design
-
-## Volunteer
-##### Civic Software Fdn
 
 :::
 

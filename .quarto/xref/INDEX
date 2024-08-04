@@ -1,5 +1,8 @@
 {
-  "quarto-resume.qmd": {
-    "quarto-resume.html": "4bf13767"
+  "resume.qmd": {
+    "resume.html": "07f548da"
+  },
+  "test.qmd": {
+    "test.html": "5fb12893"
   }
 }
