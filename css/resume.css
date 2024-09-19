@@ -3,24 +3,24 @@ paged.js Layouts
 */
 @page{
   size: letter portrait;
+  margin: 0.2in 0.1in 0.2in 0.1in;
 }
 *{
   box-sizing: border-box;
 }
 :root{
-  --pagedjs-margin-right: 0in;
-  --pagedjs-margin-left: 0in;
-  --pagedjs-margin-top: 0in;
-  --pagedjs-margin-bottom: 0in;
-  --content-width: calc(var(--page-width) - var(--margin-right) - var(--margin-left));
+  --page-width: 8.5in;
   --root-font-size: 11pt;
-  --viewer-background-color: #dcdcdc;
+  --aside-width: 14rem;
+  --aside-background-color: #333333;
+  --main-off-black: #040406;
+  --aside-horizontal-padding: 1rem;
+  --main-width: calc(var(--page-width) - var(--aside-width));
+  --viewer-background-color: #ffffff;
   --viewer-pages-spacing: 12px;
   --viewer-shadow-color: #313131;
-  --resume-margin-top: 0.4in;
-  --resume-margin-right: 0.4in;
-  --resume-margin-bottom: 0.4in;
-  --resume-margin-left: 0.4in;
+  --row-blocks-padding-top: 0.5rem;
+  --main-blocks-title-icon-offset-left: calc(-17pt - 0.25 * var(--root-font-size));
 }
 /* 
 Hides Page Numbers
@@ -28,160 +28,287 @@ Hides Page Numbers
 .pagedjs_page .pagedjs_margin-bottom-center>.pagedjs_margin-content::after {
     visibility: hidden;
 }
-/* 
-Standard Fonts
-*/
+.pagedjs_page {
+  --content-area-height: calc(var(--pagedjs-height) - var(--pagedjs-margin-top) - var(--pagedjs-margin-bottom));
+  --aside-background-width: var(--aside-width);
+}
+@page{
+  background: linear-gradient(to left, var(--aside-background-color), var(--aside-background-color) var(--aside-background-width), white var(--aside-background-width));
+}
+
+html {
+  font-size: var(--root-font-size);
+}
+body{
+  width: var(--content-width);
+}
 h1, h2, h3, h4 {
   font-family: "Overpass", sans-serif;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 h1 {
   font-weight: 900;
-  font-size: 42px;
+  font-size: 3rem;
+  padding-bottom: .5rem;
 }
 
 h2 {
   font-weight: 750;
-  font-size: 16px;
-  padding-bottom: 3px;
+  font-size: 1.2rem;
+  padding-top: .5rem;
+  margin-bottom: .3rem;
+  padding-bottom: .2rem;
+  border-bottom: .05rem solid;
 }
 h3 {
-  font-weight: 700;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 1rem;
 }
 h4 {
-  font-weight: 650;
-  font-size: 11px;
+  font-weight: 450;
+  font-size: .85rem;
+  padding-bottom: .05rem;
 }
 p {
   font-family: "Lato";
-  font-weight: 400;
-  font-size: 10px;
-  margin-bottom: 0;
+  font-weight: 375;
+  font-size: .74rem;
+  margin-bottom: 0px;
 }
 li {
   font-family: "Lato";
-  font-weight: 375;
-  font-size: 10px;
-  margin-bottom: 0;
+  font-weight: 350;
+  font-size: .74rem; 
+  margin-bottom: 0px;
   text-indent: -1.5em;
-  margin-left: 1.75em;
+  margin-left: 1.5em;
 }
-.h1-left {
-  color: #000000;
+.fas {
+  font-size: .65rem;
+  padding-right: .3rem;
 }
-.h2-left {
-  color: #050303;
-  }
-.h3-left {
-  color: #090605;
-}
-.h4-left {
-  color: #0d0907;
-}
-.p-left, .li-left {
-  color: #000000;
+.far {
+  font-size: .65rem;
+  padding-right: .3rem;
 }
 
-.h1-right {
-  color: #FFFFFF;
+
+.main-h1, .main-h2, .main-h3, .main-h4, .main-p, .main-li, .main-fa-icon {
+  color: #000000;
 }
-.h2-right {
-  color: #FFFFFF;
-  }
-.h3-right {
-  color: #FFFFFF;
+.aside-h1, .aside-h2, .aside-h3, .aside-h4, .aside-p, .aside-li, .aside-fa-icon {
+  color: #ffffff;
 }
-.h4-right {
-  color: #FFFFFF;
-}
-.p-right {
-  font-family: "Lato";
-  font-weight: 300;
-  font-size: 10.5px;
-  margin-bottom: 0;
-  color: #FFFFFF;
+.main-h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-/*
-Fontawesome Icons
-*/
-.fa-icon, .fa-icon-left {
+.fa-icon {
   padding-left: .35rem;
   padding-right: .35rem;
 }
-.fa-icon-left{
-  color: #333333;
-  padding-left: 0px;
-}
-.fa-icon-right{
-  color: ##FFFFFF;
-  padding-right: 0px;
-}
-
-.fa-solid, .fa-icon, .fa-brands {
-  font-size: 1.25rem;
-}
-/*
-knitr / htmltools weirdness
-*/
-.cell-output-display{
-  overflow: inherit;
-}
-
-/*
-Columns
-*/
-.right-column{
+.page-layout-custom{
   display: flex;
-  flex-flow: column;
-  height: 9999999999999px;
-  box-sizing: border-box;
-  background-color: #333333
+  flex-direction: row;
+  justify-content: space-between;
+  break-inside: avoid;
 }
-
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: var(--main-width);
+  padding: 0 0.5rem 0 0.5rem;
+  color: #000;
+  break-inside: auto;
+}
+#resume-aside{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: var(--aside-width);
+  padding: 0in var(--aside-horizontal-padding);
+  color: #fff;
+  break-inside: auto;
+}
 /*
-Sections
+tables
 */
-.section-vbreaker{
-  margin-bottom: 8px;
+.flex-row-space-between-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.section-top{
-  margin-top: var(--resume-margin-top);
+
+.fa-icon-main{
+  color: #000;
 }
-.section-right{
-  margin-left: 12px;
-  margin-right: var(--resume-margin-right);
+
+.resume-header{
+  display: flex;
+  flex-direction: column;
+  /*background-color: blue; might want to do some styling with header and page*/
 }
-.section-bottom{
-  margin-bottom: var(--resume-margin-bottom);
-}
-.section-left{
-  margin-left: var(--resume-margin-left);
-}
-.section-header{
+.resume-header-name {
   margin-top: 0;
-  margin-bottom: 0px;
-  border-bottom: 2px solid #333333
+  margin-bottom: 0;
+  padding: 0px;
+  text-align: center;
+  height: 3.25rem;
 }
-
-.section-header-border-padding{
-  margin-top: 6px;
+.resume-header-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0px;
+  text-align: center;
+  border-bottom: none !important;
+  justify-content: center;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
 }
-
-/* 
-specific, could use id with # instead
-*/
-
-.education-entry {
-  margin-bottom: 8px;
+.resume-header-contact{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
-
-.education-entry-flex {
+#fa-header-envelope, #fa-header-home, #fa-header-linkedin, #fa-header-github, #fa-header-stack-overflow {
+  font-size: 1rem;
+  padding-top: .25rem;
+}
+.main-objective{
+}
+.main-company {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+}
+.main-experience-company-header{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0;
+}
+.main-experience-company-name{
+  color: var(--main-off-black);
+  font-weight: 500;
+}
+.main-experience-role-name{
+  font-weight: 575;
+}
+.main-experience-company-location, .main-experience-role-dates, {
+  color: var(--main-off-black);
+  font-weight: 475;
+}
+.main-experience-company-location-icon {
+  color: var(--main-off-black);
+}
+.main-experience-role{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+.main-experience-role-title{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: .05mm;
+}
+.experience-role-details{
+  margin-bottom: 0.25rem;
+}
+.fa-location-dot{
+  font-size: .6rem;
+  padding-right: .3rem;
+}
+.aside-education-details{
+  padding-top: .2rem;
+}
+.aside-tools-section-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-left: 1rem;
+  margin-bottom: 0;
+  padding-bottom: 0.15rem;
+}
+.aside-tools-section-list-item{
+  font-size: .7rem;
+  text-indent: -0.3rem;
+  margin-left: 0rem;
+  padding-right: 1rem;
+  color: #ffffff;
+}
+.aside-tools-subsection-header {
+    color: #333333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: .1rem;
+    margin-bottom: .1rem;
+    height: 1.25rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding-bottom: 0rem;
+    padding-top: 0rem;
+}
+
+
+.h2 {
+  break-inside: avoid;
+}
+
+.experience-role-title {
+  break-inside: avoid;
+}
+.section-details {
+  break-inside: avoid;
+}
+
+
+@media screen {
+  body {
+    background-color: var(--viewer-background-color);
+    margin: 0; /* for mobile */
+    width: calc(var(--pagedjs-width) + 2 * var(--viewer-pages-spacing)); /* for mobile */
+  }
+   .pagedjs_pages {
+    max-width: var(--pagedjs-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+   .pagedjs_page {
+    box-shadow: 0 0 calc(0.66667 * var(--viewer-pages-spacing)) var(--viewer-shadow-color);
+    margin: var(--viewer-pages-spacing) 0;
+  }
+}
+ @media screen and (min-width: 8.5in) {
+  /* not a mobile */
+  body {
+    margin: auto;
+    width: unset;
+  }
 }
