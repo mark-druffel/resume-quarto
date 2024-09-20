@@ -1,0 +1,85 @@
+aside:
+  Education:
+    "University of Notre Dame":
+      date: 2016
+      degree: "M.S. in Business Analytics"
+    "Ohio University": 
+      date: 2010
+      degree: "Bachelors in Business Admin"
+  "Soft Skills":
+   - Presentation
+   - Data Strategy
+   - Project Management
+   - Strategy
+   - People Management
+  Coding:
+    scoring_scale: 7.25
+    SQL: 7
+    R: 7
+    Python: 5
+    JavaScript: 4
+    Cypher: 3
+    Bash: 5
+    "HTML/CSS": 5
+  "Tools":
+    "Data Wrangling":
+      - tidyverse 
+      - Ibis
+      - Polars
+      - Excel
+    "Visualization":
+      - ggplot2
+      - plotnine
+      - Plotly
+      - observable.js
+      - Apache Superset
+      - Tableau
+    Pipeline:
+      - Kedro
+      - Apache Airflow
+      - targets
+    "Modeling":
+      - tidymodels
+      - scikit-learn
+      - tidytext
+      - igraph
+      - fable
+    "Backend":
+      - Apache Spark
+      - Postgres 
+      - DuckDB
+      - MS SQL
+      - S3
+      - ADLS
+      - EC2
+      - Droplets
+      - knex.js
+      - Apache Arrow
+      - Apache Hive
+      - neo4j
+    "Web Dev":
+      - R shiny
+      - Hugo
+      - Netlify
+      - Quarto
+      - Markdown
+      - Typst
+    "Devops":
+      - git
+      - docker
+    "Design":
+      - dbdiagram
+      - mermaid.js
+      - Gimp
+      - Invision
+      - Powerpoint
+  Volunteer:
+    "Civic Software Foundation":
+      "Executive Producer":
+        "Designed and developed longitudinal analysis app for Oregon Department of Education."
+  Hobbies:
+   - Rock Climbing
+   - Hiking
+   - Biking
+   - Cooking
+   - Reading

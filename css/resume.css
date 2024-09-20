@@ -49,7 +49,7 @@ h1, h2, h3, h4 {
 }
 h1 {
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2.75rem;
   padding-bottom: .5rem;
 }
 
@@ -133,7 +133,7 @@ li {
   justify-content: flex-start;
   flex-wrap: nowrap;
   width: var(--aside-width);
-  padding: 0in var(--aside-horizontal-padding);
+  padding-left: 0.15in;
   color: #fff;
   break-inside: auto;
 }
@@ -161,7 +161,7 @@ tables
   margin-bottom: 0;
   padding: 0px;
   text-align: center;
-  height: 3.25rem;
+  height: 3rem;
 }
 .resume-header-title {
   margin-top: 0;

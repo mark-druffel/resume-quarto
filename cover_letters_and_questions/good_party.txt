@@ -1,0 +1,24 @@
+# Me
+I'm Mark, I've been working in analytics for over a decade. I love working with data and developing products. 
+
+I am great analyst, a decent programmer, and excellent at systems design. What makes me unique is strategic thinking, presenting ideas clearly, and candid communication. Recently, I redesigned 84.51's campaign management app, Dart, to address issues I identified with the data model. I'll use that to illustrate. 
+
+I "see the forest from the trees." As a new team member, I identified issues with Dart's data model that team members with significantly more domain experience did not. The most significant issue was the data model nested key "entities" within other modules rather than separately. That caused modules to be tightly coupled and had follow-on effects including no support for measuring uplift for multi-channel marketing campaigns, estimating audience sizes in real-time, running hyper-personalized campaigns, etc.
+
+If I'm good at anything, it's making analogies. I'm able to abstract concepts to communicate clearly. To help the team understand the issues, I created simple user storyboards of expected user interactions and accompanying, simplified ERD diagrams to illustrate the issues. It made it apparent that we would have to "bolt-on" solutions to solve many common use cases (i.e. the model wasn't scalable). 
+
+I heard this paraphrased quote years ago, it aptly describes me. "I know I am talking nonsense, but I’d rather go rambling on, and partly expressing something I find it difficult to express, than faultless platitudes." I try not to talk nonsense, but always speak up when I think something isn't right, even when it's uncomfortable. At the time of the data model issues, I was new to the team and we were under deadline pressure. The data model design wasn't my responsibility and I knew presenting it would cause problems, but I still did. 
+
+# Interested
+Mission and collaboration. 
+
+I feel the mission statement for Goodparty.org more than any mission statement I've ever read. I want to see our government work for "the people" and I believe big money has corrupted both major parties and crippled the system. The thought of working to change that every day excites me more than I can express and I believe that work absolutely has to happen for future generations. 
+
+Startup culture is generally collaborative. I've worked at a few startups and smaller organizations and I miss it. Working at bigger companies has benefits, but ultimately smaller organizations can move faster and collaborate more effectively which enables them to focus more on "the problem" than the logistics of how to work on the problem. 
+
+# Comments
+Regarding the MBA & top-tier consulting experience requirements. 
+
+I do not have an MBA, but I do have an MSBA (Masters of Science in Business Analytics). I actually think that experience is probably even better suited towards this role. It was designed to be a middle ground between an MBA and a masters in data science. We did a lot of the same coursework as the masters in data science, but with an emphasis on business coursework (strategy, marketing, finance, operations mgmt, etc.).
+
+I did not work at a "top-tier" management consulting company, at least not in name. I worked as a management consultant for 4.5 years at a boutique consulting company. When I started there, I was employee 49 and the first analytics consultant. When I left it was nearly 200 employees. I learned a lot in that role and we competed with the top-tier firms on bids regularly (Deloitte, BCG, KPMG, etc.). Beyond that, as the first analytics consultant I helped build the practice. I worked with leadership to design our service offerings, was looked to for thought leadership across the firm, helped design our recruiting process for technical hires, and even designed and developed infrastructure to help our internal operations team scale certain back-office processes.   

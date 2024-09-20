@@ -11,7 +11,7 @@ format:
       - text: |
           <script src="resources/js/paged.polyfill.js"></script>
       - text: |
-          <link rel="stylesheet" type="text/css" href="resources/css/print.css">
+          <link rel="stylesheet" type="text/css" href="resources/css/print.css" media="screen">
       - text: |
           <link rel="stylesheet" type="text/css" href="resources/css/preview.css" media="screen">
     page-layout: custom
@@ -24,57 +24,50 @@ format:
     link-external-icon: true
     link-external-newwindow: true
     email-obfuscation: references
-    css: [css/resume.css, css/header.css, css/experience.css]
+    css: [css/resume.css]
 engine: knitr
 execute:
-  
   echo: false
   error: false
   eval: true
-  output: true
+  output: asis
   warning: false 
 ---
 ```{r}
 #| file: R/resume.R
 ```
 
-:::: {.columns} 
-::: {.column width="69%"}
-```{r}
-yaml::read_yaml("data/header.yml") |> 
-  header_div()
-```
-
-```{r} 
-yaml::read_yaml("data/experience.yml") |> 
-  split_jobs() |> 
-  job_divs() |> 
-  section_div(title = "Experience", icon = "suitcase", left = T) 
+:::{#main}
+```{r main}
+#| classes: main
+header_div(resume_data)
+objective_div(
+  objective_details_div
+)
+experience_div(
+  experience_details_div
+)
 ```
 :::
 
-::: {.column width="2%"}
-<!-- empty column to create gap -->
-:::
-
-::: {.column .right-column width="29%"} 
-```{r} 
-sidebar_yaml <- yaml::read_yaml("data/sidebar.yml")
-sidebar_yaml |> 
-  split_sidebar() |> 
-  education_divs() |> 
-  section_div(title = "Education", icon = "graduation-cap", top = T, right = T) 
-section_div(title = "Coding", icon = "terminal", right = T)
+:::{#resume-aside}
+```{r aside1} 
+#| classes: aside
+education_div(
+  education_details_div
+)
+soft_skills_div
+coding_div()
+```
+```{r skills_plots}
+#| classes: aside
+plot_skills()
 ```
 ```{r}
-#| fig-height: 3.5
-sidebar_yaml |> 
-  split_sidebar() |> 
-  coding_df() |>
-  coding_lollipop(margin_ = margin(0, 2, 0, 0.5, "cm"))
+tools_div
+volunteer_div(
+  volunteer_details
+)
+hobbies_div
 ```
-
-
-:::
-
 :::

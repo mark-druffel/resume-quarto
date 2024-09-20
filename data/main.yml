@@ -1,0 +1,60 @@
+main:
+  objective: 
+    #desc: "Versatile data scientist and engineer with over a decade of experience in data analysis, modeling, systems design, development, project management, and people management. Skilled at data science and product development, but what makes me unique is my well rounded soft skills that I've developed working in multiple industries, in many roles, and at every level of organizations top to bottom. Seeking a collaborative team that can leverage my broad skill set to help meet their strategic goals."
+    desc: "Data scientist and engineer with 10+ years experience in data analysis, modeling, systems design, development, and strategy. Proven leader with versatile soft skills developed working across industries in many roles. Eager to apply my technical expertise and collaborative mindset to drive strategic objectives within a dynamic team."
+  experience:
+    "84.51°":
+      location: "Remote"
+      "Lead Data Scientist":
+        dates: "Dec 2022 - Present"
+        desc: "Lead team responsible for developing and supporting Kroger marketing campaign management and measurement tools:"
+        bullets:
+         - "Led design and development of the campaign measurement data pipeline refactor utilizing Kedro and Ibis, which improved maintainability, flexibility, and extensibility."
+         - "Redesigned the campaign management data model to be composable and flexible, improving platform scalability. The new data model unlocked several new business capabilities, improved engineering velocity, and decreased ETL times."
+    "DocStation":
+      location: "Remote"
+      "Senior Data Analyst":
+        dates: "Apr 2021 - Dec 2022"
+        desc: "Founding member at a seed funded start-up that used technology to enable pharmacists to deliver value based care:"
+        bullets:
+         - "Expanded the data warehouse using pyspark and Airflow to support new business services and end user analytics."
+         - "Designed and developed KPI's and operational dashboards with Apache Superset, R Shiny, AWS, and docker."
+         - "Performed analysis that led to increased revenue by improving the app's task targeting for pharmacists."
+    "Propeller":
+      location: "Portland, OR"
+      "Analytics Consultant": 
+        dates: "Jan 2017 - Apr 2021"
+        desc: "First analytics consultant hired at a boutique management consulting company. Worked with clients to develop data strategies, road maps, and execute analytics and IT projects. Clients included Nike, Salesforce, Kindercare, Cambia, and Mercy Corps. Example projects included:"
+        bullets:
+         - "Created a feedback loop between a product team and their end-users by developing a text analysis and NLP pipeline, which reported user pain points from survey data."
+         - "Designed a prototype recruiting management dashboard that enabled HR team to manage a data-driven recruitment process improving consistency, velocity, and candidate experience."
+         - "Developed and facilitated workshops to upskill client analytics team's technical and project management skills."
+         - "Scaled Propeller's internal operations by developing infrastructure to automate KPI's including API wrappers, a data pipeline, process automation, and reporting using R, Python, and AWS."
+    "Northern Trust":
+      location: "Chicago, IL"
+      "Manager, Reporting":
+        dates: "Oct 2015 - Dec 2016"
+        desc: "Mananged the reporting strategy, roadmap, and product development:"
+        bullets:
+         - "Designed a prototype reporting app with d3.js and React for rich, interactive reporting and user collaboration."    
+         - "Designed and developed a data pipeline that transformed semi-structured and unstructured metadata for analysis to identify data processing bottlenecks, forecast server demand, and deprecate underutilized services."
+      "Team Lead, Reporting":
+        dates: "Sept 2013 - Oct 2015"
+        desc: "Led a global team of data and operations analysts:"
+        bullets:
+         - "Developed and managed reporting for a global client portfolio and internal teams. "
+         - "Decreased data quality issues in prod (~2x) by developing and managing data QA processes including transformation validation, profiling, consistency checks, and completeness checks."
+         - "Managed the enterprise user access process and customer data exchanges."
+         - "Trained and upskilled analysts with data analysis and programming including Excel, SQL, R, Python, and Tableau."
+    "Plante Moran":
+      location: "Chicago, IL"
+      desc: "Project managed and executed IT audits and risk assessments for clients in various industries."
+      "Senior Auditor":
+        dates: "Mar 2013 - Sept 2013"
+      "Staff Auditor":
+        dates: "Jun 2011 - Mar 2013"
+    "Fifth Third Bank":
+      location: "Cincinnati, OH"
+      "Staff Auditor":
+        dates: "Jun 2010 - Jun 2011"
+        desc: "Performed financial audits, IT audits, and risk assessments."

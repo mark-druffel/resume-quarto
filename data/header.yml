@@ -1,19 +1,20 @@
-name: Mark Druffel
-title: Data Scientist, Analytics Engineer
-contact:
-  email:
-    icon: envelope
-    href: mailto:mark.druffel@gmail.com
-  website:
-    icon: home
-    href: www.mark-druffel.com
-  linkedin:
-    icon: linkedin
-    href: https://www.linkedin.com/in/markdruffel/
-  github:
-    icon: github
-    href: https://github.com/mark-druffel
-  stackoverflow:
-    icon: stack-overflow
-    href: https:/stackoverflow.com/users/6213809/mark-druffel
+header:
+  name: Mark Druffel
+  title: Data Scientist, Analytics Engineer
+  contact:
+    email:
+      icon: envelope
+      href: mailto:mark.druffel@gmail.com
+    website:
+      icon: home
+      href: https://www.mark-druffel.com/
+    linkedin:
+      icon: linkedin
+      href: https://www.linkedin.com/in/markdruffel/
+    github:
+      icon: github
+      href: https://github.com/mark-druffel
+    stackoverflow:
+      icon: stack-overflow
+      href: https:/stackoverflow.com/users/6213809/mark-druffel
 
